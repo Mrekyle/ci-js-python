@@ -35,7 +35,6 @@ let h = 10;
 let k = 20;
 let result;
 
-// Write your if statement here:
 // If else statments only need to take one condition as it is the same scope level and the same statment. 
 if (h < k) {
     result = "a is smaller";
@@ -44,3 +43,17 @@ if (h < k) {
 }
 
 console.log(result);
+
+//Ternary Expressions
+
+let a = 10;
+let b = 20;
+let result;
+
+// Write your code below this line. 
+
+result = (a > b) ? "a is smaller" : "a is not smaller"; 
+// Compares the two variables together and based on the date logs one of the other strings. 
+
+console.log(result);
+
