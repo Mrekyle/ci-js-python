@@ -29,7 +29,7 @@ let numFifty = 50;
 let numDecimal = 50.00;
 console.log(numFifty === numDecimal);
 
-// If Else Statments 
+// If Else Statements 
 
 let h = 10;
 let k = 20;
