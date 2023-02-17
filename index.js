@@ -36,6 +36,7 @@ let k = 20;
 let result;
 
 // If else statments only need to take one condition as it is the same scope level and the same statment. 
+
 if (h < k) {
     result = "a is smaller";
 } else {
@@ -98,7 +99,7 @@ console.log(output);
 // Changes the output dependent of the varibles data. If it matches it outputs that specific data match 
 
 let chocolate = ''; 
-let errorType = "page";
+let errorType = "username";
 
 switch (errorType) {
     case "username":
