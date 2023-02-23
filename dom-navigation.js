@@ -22,7 +22,7 @@ console.log(secondH1);
 let mainContent = document.getElementsByClassName('main-content');
 console.log(mainContent);
 
-let second = document.getElementsByClassName('section-content')[0]; 
+let second = document.getElementsByClassName('section-content')[0]; // Displays the first class with that name as of the indexing value
 console.log(second);
 
 // Nested elements the family tree of the DOM
@@ -35,7 +35,7 @@ let firstChild = mainDiv.children[0];  // the div's first child
 let nextSibling = mainDiv.nextElementSibling;  // the next element at the same nesting level
 let prevSibling = mainDiv.previousElementSibling;  // the previous element at the same nesting level
 
-let parentElement = document.getElementsByClassName('section-content')[0].parentNode;
+let parentElement = document.getElementsByClassName('section-content')[0].parentNode; // Finds the class name and outputs the sections parent element
 console.log(parentElement);
 
 let child = document.getElementById('main').children;

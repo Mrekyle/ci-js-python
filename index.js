@@ -116,5 +116,3 @@ switch (errorType) {
 }
 
 console.log(chocolate);
-
-

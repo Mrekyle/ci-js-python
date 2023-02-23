@@ -9,11 +9,12 @@ function changeCards() {
 }
 
 // The above function changes the color of multiple different divs based on the user clicking the paragraph or a button.
+
 // On Mouse Enter and Leave
 
 function turnPink() {
     let box = document.getElementById('box');
-    box.style.backgroundColor = 'lightpink';
+    box.style.backgroundColor = 'lightpink'; // Changing the background color of the box id
 }
 
 function turnYellow() {
