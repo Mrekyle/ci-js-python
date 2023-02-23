@@ -50,7 +50,7 @@ function handleSubmit(event) {
     let p1 = form.elements['password'].value; // Getting the password data from the input fields and setting them to a variable 
     let p2 = form.elements['confirm-password'].value;
   
-    if (p1 !== p2) { // Important comparrison used to ensure they are exactly the same 
+    if (p1 !== p2) { // Important comparison used to ensure they are exactly the same 
       let errorDiv = document.getElementById('errors'); // If they don't match it will input the html into the errors div on the html document
       errorDiv.innerHTML = "<p>Please ensure your passwords match.</p>"
     } else {
