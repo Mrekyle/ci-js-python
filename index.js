@@ -116,3 +116,18 @@ switch (errorType) {
 }
 
 console.log(chocolate);
+
+// Looping through an Index
+
+function loop() {
+    for (let i = 0; i < myArrary.length; i++) { // Basic loop through an index
+        console.log(myArrary[i]);
+    }
+}
+
+// In looping 
+
+function inLoop() {
+    for(let i in myArrary) // More advanced simple loop as it is shorter more concise code adding to readability 
+    console.log(myArrary);
+}

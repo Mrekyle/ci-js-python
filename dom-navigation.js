@@ -116,3 +116,20 @@ The above function changes what is displayed based on the button that has been c
 Using the innerHTML element we are able to write custom html code inside of javascript and place it anywhere in the html document
 where the function is called according to where the 'id' is located. Remembering to place the code inside the backticks `....`
 */
+
+// DOM navigation 
+
+let cocktails = ["Daiquari", "Dry Martini", "Margatrita", "Manhattan", "Mojito", "Mai Tai"];
+
+let list = document.createElement('ul');
+
+let listItems = '';
+
+for(let drink in cocktails) { // Looping through the array above and creating a list item element to insert into the ul element
+    listItems += `<li>${cocktails[drink]}</li>`; 
+}
+
+list.innerHTML = listItems; // Inserting the completed list items element into the list ul element 
+
+document.body.appendChild(list); // Adding the finished list element to the child element of the body 
+
