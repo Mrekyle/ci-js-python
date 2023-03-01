@@ -119,7 +119,7 @@ where the function is called according to where the 'id' is located. Remembering
 
 // DOM navigation 
 
-let cocktails = ["Daiquari", "Dry Martini", "Margatrita", "Manhattan", "Mojito", "Mai Tai"];
+let cocktails = ["Daiquiri", "Dry Martini", "Margarita", "Manhattan", "Mojito", "Mai Tai"];
 
 let list = document.createElement('ul');
 
