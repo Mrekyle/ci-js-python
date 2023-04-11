@@ -20,6 +20,12 @@ function multiply() {
     return sum;
 }
 
+const hello = () => {
+    console.log('I love Jessica')
+}
+
+console.log(hello)
+
 sum = multiply()
 console.log(sum)
 
