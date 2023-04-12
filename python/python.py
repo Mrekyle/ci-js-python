@@ -68,3 +68,10 @@ print(result)
 result_two = "The answer to the ultimate question is " + str(42)
 print(result_two)
 
+
+print('rat' in 'crate') # in Checks if the word from the statment is in the other. Can be done with variables and all data types
+print('ink' not in 'sink') # checks if 'ink' is in the string of 'sink' But as it is not specifically in the string - returns false 
+print('robbie' in ['gary', 'howard', 'mark', 'jason']) # Checks if the name robbie is in the list of names - Returns false
+
+
+
