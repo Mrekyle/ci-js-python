@@ -59,23 +59,6 @@ else:
     print('No meetings today')
 
 
-# For Loops
-
-languages = ["HTML", "CSS", "JavaScript"]
-for language in languages: # Assigning each item in the list to the language variable and printing to the console. Until the list is finished
-  print(language)
-
-
-for character in "Python":
-  print(character) #  Same concept here, Just each letter is being printed to the console as there is no list/arrary to iterate over
-  # It iterates over the individual characters
-
-users = ['anna', 'chris', 'brian']
-for i in range(len(users)): # Loops over the users variable and assigns it to the 'i' Variable
-    users[i] = users[i].capitalize() # Capitalizes the first letter of each name in the users list
-    
-print(users)
-
     
 
 
