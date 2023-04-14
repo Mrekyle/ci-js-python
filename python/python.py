@@ -23,4 +23,29 @@ my_Var = 5
 # all of the above variables are completely different despite essentially having the same names and values assigned to them
 
 # True/False
-# In Python Booleans are defined by using the true and false keywords. But the first letter of each must be capataised
+# In Python Booleans are defined by using the true and false keywords. But the first letter of each must be capitalized
+
+# Tuple is a list or item that is unchangeable and will always stay the same. The same concept as a const variable in JS
+
+# Dictionaries are the same as objects and defined in the same way in the as objects in JS using the {":"}
+
+# Accessing data from a dictionary 
+
+data = {
+    "first_name": "Arthur",
+    "last_name": "Dent",
+    "species": "Human"
+}
+
+# add your code here
+name = data['first_name'] # Assigning a new variable and adding the data from the dictionary to that variable using [] notation
+
+species = data['species']
+
+data['age'] = 42 # Assigning a new key to the object of data. And adding in its value 
+
+print(name)
+print(species)
+
+# this will print the data to the terminal
+print(data)

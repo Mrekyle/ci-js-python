@@ -7,6 +7,9 @@ for (let i = 0; i < numbers.length; i++) { // .length is important to ensure tha
     console.log(numbers[i] + 10); // Logging the array with the addition of 10 to each number value.
 }
 
+for (let numbers of numbers) {
+    console,log(numbers)
+}
 // While Loops
 
 let x = 0;

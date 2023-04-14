@@ -81,7 +81,7 @@ while x <= 3:
     y = 200
     while y <= 203:
         print(x, y) # Prints out both variables together
-        y += 1
+        y += 1 
         
     x += 1
 
