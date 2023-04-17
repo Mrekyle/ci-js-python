@@ -49,3 +49,10 @@ print(species)
 
 # this will print the data to the terminal
 print(data)
+
+
+# List comprehension 
+
+letters = [i for i in 'Marvin'] # Instead of creating an entire for loop to loop through. This allows it to be compressed into a single line
+
+print(letters)
