@@ -56,3 +56,12 @@ print(data)
 letters = [i for i in 'Marvin'] # Instead of creating an entire for loop to loop through. This allows it to be compressed into a single line
 
 print(letters)
+
+
+"""
+Multi line comments can be made and implemented into python by using three double quotation marks. At the beginning and ending of the
+comment itself. Allowing for as much or as little space as needed. If writing a comment inside a function or a loop it should be 
+indented the same amount as the current scope of the code. 
+"""
+
+# Single line comments are created by using the hash key symbol
