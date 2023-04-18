@@ -65,3 +65,24 @@ indented the same amount as the current scope of the code.
 """
 
 # Single line comments are created by using the hash key symbol
+
+
+# Random code
+
+
+def multiply_numbers(num1, num2):
+    sum = num1 * num2 # Multiplies the numbers given in the results variable 
+    return sum
+    
+results = multiply_numbers(5, 4) #Calls the function and stores the inputs required to be multiplied together
+
+print(results)
+
+
+def object_1(name):
+    print(f"hello World {name} ")
+    
+    
+username = input("What is your name")    
+
+object_1(username)
