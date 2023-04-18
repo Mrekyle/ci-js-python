@@ -86,3 +86,67 @@ def object_1(name):
 username = input("What is your name")    
 
 object_1(username)
+
+"""
+Using the global keyword allows a variable from the global scope to be accessed and modified inside a function/in the local scope. 
+Both examples below will output a different result. In the first one the global variable isn't redefined as it was defined as a local 
+scope variable as well as the global scope variable. 
+
+Ensuring to give access to the variable by declaring it at the start of the function by saying 'global some_var_name' before going 
+on to use the variables data or modifying the data 
+"""
+can_access = False
+	
+def update_access():
+    age = int(input('Enter your age: '))
+    if age >= 18:
+        # We may think this is updating the global variable can_access, but its not as it is now considered a local variable
+        can_access = True
+        return('You are old enough enter')
+    else:
+        return('You are too young, you may not enter');
+
+update_access()
+
+print(can_access) # will still print out False
+
+can_access = False
+	
+def update_access():
+    global can_access # Global allows a global scope variable to be accessed inside of the function which allows the modification
+    age = int(input('Enter your age: '))
+    if age >= 18:
+        # The global keyword is used
+        can_access = True
+        return('You are old enough to enter')
+    else:
+        return('You are too young, you may not enter');
+
+update_access()
+
+print(can_access) # will now print True if an age >= 18 is entered
+
+"""
+The same is done with the 'nonlocal' scope keyword. Meaning that if there is a nested function inside a function we can use that keyword
+to give the nested function access to the parents variable. Again making sure to define it at the start of the function before using it
+"""
+
+# This one will give an error as it doesn't have access to the parents variables 
+def which_scope():
+    my_age = 49 # local variable my_age
+    def inner_scope():
+        my_age += 1 # Issue when we try to run this line.
+        print(my_age)
+    inner_scope()
+
+which_scope()
+
+def which_scope():
+    my_age = 49 # local variable my_age
+    def inner_scope():
+        nonlocal my_age # nonlocal allows the nested function to have access to the parents variables 
+        my_age += 1 # Issue when we try to run this line.
+        print(my_age)
+    inner_scope()
+
+which_scope()
