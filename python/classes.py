@@ -36,7 +36,7 @@ class Customer:
         self.fname = fname
         self.lname = lname # Ensuring to add arguments in the same order to line up with the inputted date from the variable
         self.email = email
-        self.phone = phone
+        self.phone = phone # self keyword is the same as the 'this' keyword in JS. To be used must be passed as an argument
 
 
 # The code below will use your class to print values to the terminal after
@@ -48,3 +48,76 @@ print(customer_one.fname) # Using '.' notation to access the fname inside the cl
 print(customer_one.lname)
 print(customer_one.email)
 print(customer_one.phone)
+
+'''
+Code institute class coding challenge 
+'''
+       
+# Write your code here
+class OrderItem:
+    '''Creates an instance of OrderItem'''
+    def __init__(self, item, price, quantity):
+        self.item = item
+        self.price = price
+        self.quantity = quantity
+        
+    def description(self):
+        '''Describe the OrderItem'''
+        return f"{self.quantity} x {self.item} at ${self.price} each" # Using an f string allows us to string multiple items from the object
+                                                                      # together into a single string 
+
+
+# The code below will use your class to print values to the terminal after 
+# it has been written. Comment the lines below back in to test it  
+
+order_item_one = OrderItem("bowtie", 10, 3) # Ensuring the list items are in the correct order for the init function to work correctly
+print(order_item_one.description())
+
+order_item_two = OrderItem("Fez", 25, 1)
+print(order_item_two.description())
+
+
+"""
+The above class of Bird allow us to return a statement of saying that the kind of the owl makes a certain call. dependent on the variables 
+"""
+
+
+"""
+
+In Python classes can have multiple instances of the same object. Allowing data to be overwritten and used but also have the previous
+date still in memory. Such as below 
+
+"""
+
+class Bird:
+   """
+   Bird class
+   """
+   def __init__(self, kind, call):
+      #properties
+       self.kind = kind
+       self.call = call
+
+   #behaviour
+   def description(self):
+       """
+       describe the bird
+       """
+       return f"A {self.kind} goes {self.call}" 
+  
+   def bird_call(self):
+       print(self.call.upper()) # Transforming the firs letter of the word into uppercase text.
+
+owl = Bird('Owl', 'Twit Twoo!')
+print(owl.call)
+print(owl.description())
+crow = Bird('Crow', 'Caaaw!')
+print(crow.description())
+owl.call = 'screech'
+print(owl.description())
+del owl.call # The del keyword also allows us to delete certain data from the object. And re define it if wanted at a later date
+# Any code below this will not execute as an error has been thrown. Causing the program to stop at the error
+print(owl.description())
+
+hawk = ('Hawk', 'Cawww')
+print(hawk.description())
