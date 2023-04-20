@@ -150,3 +150,40 @@ def which_scope():
     inner_scope()
 
 which_scope()
+
+"""
+Python Decorators are special characters that allow functions to be modified by other functions.
+"""
+
+def add_author(func):
+    """
+    Decorator to add string with author information
+    to print after decorated function runs
+    """
+    def wrapper(*args):
+        r = func(*args)
+        return f"{r}\nBy Code Institute"
+    return wrapper
+        
+# write your code here
+
+@add_author # The decorator adds in the title of the article to the function. 
+def print_article_title(title):
+    return f"Article Title {title}"
+    
+result = print_article_title("Python Decorators")
+
+print(result)
+
+numbers = [12, 45, 60, 87, 999, 200, 84, 42, 87, 77, 2, 3, 77, 99, 20]
+
+
+def odd_numbers(list_of_nums): 
+    new_list = []
+    for nums in list_of_nums:
+        if nums % 2 != 0: # Ensuring to check if it is equal or not equal to 0 to ensure that it is passed to the intended place
+            new_list.append(nums) # Append method is adding the new nums list to the new_list variable allowing for a print method
+        
+    print(new_list) # prints the new_list to the console. Outside of the for loop.
+        
+odd_numbers(numbers)
