@@ -121,3 +121,37 @@ print(owl.description())
 
 hawk = ('Hawk', 'Cawww')
 print(hawk.description())
+
+"""
+With classes you can create subclasses of a certain class just by passing it as a parameter of the new class being created. Allowing the
+use of all the data inside of the parent class inside of the sub class
+"""
+
+class Bird:
+    """
+    Bird class
+    """
+    # class attribute
+    definition = "a warm-blooded egg-laying vertebrate animal distinguished by the possession of feathers, wings, a beak, and typically by being able to fly."
+
+    def __init__(self, kind, call):
+        # instance attribute
+        self.kind = kind
+        self.call = call
+
+    def description(self):
+        """
+        describe the bird
+        """
+        return f"A {self.kind} goes {self.call} and is {self.definition}" 
+
+
+class Parrot(Bird): # Subclass of the Bird class. By passing it as a argument of the class of parrot allowing the use of all the code in
+    def __init__(self, color): # the parent class to be passed. Once data is passed it will use the parents class to use the data.
+        Bird.__init__(self, 'Parrot', 'Kah!') # ensuring everything is in the correct order 
+        self.color = color
+
+
+parrot = Parrot('blue')
+print(parrot.color)
+print(parrot.description())
