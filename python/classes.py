@@ -155,3 +155,31 @@ class Parrot(Bird): # Subclass of the Bird class. By passing it as a argument of
 parrot = Parrot('blue')
 print(parrot.color)
 print(parrot.description())
+
+"""
+Class composition uses the base concept of a subclass. In the way you can string multiple classes together by passing them in the same way
+but if needed classes can be left out. Such as below. The VW has an internal combustion engine, so it needs them properties to have them
+passed. Whereas the tesla doesn't need it.
+"""
+
+class Vehicle:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+class Engine:
+    def __init__(self, capacity, fuel):
+        self.capacity = capacity
+        self.fuel = fuel
+    
+class InternalCombustion(Vehicle, Engine):
+    def __init__(self, make, model, capacity, fuel):
+        Vehicle.__init__(self, make, model)
+        Engine.__init__(self, capacity, fuel)
+        
+class Electric(Vehicle):
+    def __init__(self, make, model):
+        Vehicle.__init__(self, make, model)
+        
+volkswagen = InternalCombustion("Volkswagen", "Golf", 1.7, "Diesel")
+tesla = Electric("Tesla", "X")
