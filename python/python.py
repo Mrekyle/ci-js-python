@@ -187,3 +187,50 @@ def odd_numbers(list_of_nums):
     print(new_list) # prints the new_list to the console. Outside of the for loop.
         
 odd_numbers(numbers)
+
+"""
+When creating a python program we divide and split our functions into different files to avoid repetition of code across the application.
+This not only keeps the code looking cleaner and easier to read it also allows us to reusable code into different files. Or importing 
+libraries of code to your code.  
+"""
+
+from division import divide 
+# first is the file name and the second is the method/functions to import. Or for access to multiple functions/methods
+
+import division
+# gives access to everything inside the division file. meaning to use anything you'd need division.divide to access the divide method
+# etc...
+
+"""
+Math - Gives us access to all the math functionality of pythons math module - Checking the docs for all information
+import math
+"""
+
+math.pi
+math.random
+math.abs
+math.floor
+math.ceil
+math.round
+math.pow
+math.sqrt
+math.min
+math.max
+
+# Just a few of the functions we can access
+
+"""
+Date and time - Gives access to the date and time functionality of the datetime module. Allowing us to get the exact date and time
+at any required place.
+Remembering to check the docs for all relevant information
+"""
+
+from datetime import datetime
+
+# write your code here
+
+today = datetime.now().date()
+
+print(today)
+
+
