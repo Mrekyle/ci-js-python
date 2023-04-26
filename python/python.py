@@ -245,9 +245,53 @@ while True:
         a = int(input("Please enter an integer as the numerator: "))
         b = int(input("Please enter an integer as the denominator: "))
         print(a / b)
-    except ZeroDivisionError:
+    except (ZeroDivisionError, ValueError):
         print("Please enter a valid denominator.")
     except ValueError:
         print("Both values have to be integers.")
     except Exception:
         print('Another error has occurred')
+
+
+"""
+Using specific python built in errors allow us to determine what type of error we are expecting to see based on the information provided
+Such as below, it gives an error because the variable that is being printed does not exist. 
+"""
+
+try:
+    print(non_existent_variable)
+except NameError:
+    print("Variable not defined")
+
+"""
+There is also a else and finally statement included in the try block of code. That is an optional block to add. But when it is included
+it runs regardless of the statements and errors thrown. The else block will run after the try block has found no errors in the code. 
+Meaning what is inside the block will run. 
+The finally block will always run once the program has finished. Regardless of any errors being found or no errors being found
+"""
+
+def linecount(filename):
+    """
+    Counts the lines in a text file.
+    Prints the opening line of a text file. 
+    """
+    try:
+        f = open(filename, 'r')
+        s = f.readlines()
+    except OSError as e:
+        # OSError exception is used as it deals with system errors such as I/O errors
+        # OSError returns an error code (errno) and message (strerror)
+        errno, strerror = e.args
+        print(f"There is an I/O error number, {errno}: {strerror}.")
+    else:
+        # This is the code that does the line counting
+        print(f'{filename} is {len(s)} line long.')
+        print(f"The opening line of {filename} is '{s[0]}'")
+        f.close()
+    finally:
+        # This will print whether the line count has been successful or not
+        print(f'Finished with {filename}.')
+    
+linecount('gulliver.txt')
+print("\n")
+linecount('swift.txt')
