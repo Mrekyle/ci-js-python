@@ -234,3 +234,20 @@ today = datetime.now().date()
 print(today)
 
 
+"""
+Try and Except statements are code blocks that allow us to throw an error to allow us to determine what has gone wrong based on an input 
+for example. They can be strung together like below. Or they can be a single try except. It also allows us to execute certain code based
+on the error that was thrown. 
+"""
+
+while True:
+    try:
+        a = int(input("Please enter an integer as the numerator: "))
+        b = int(input("Please enter an integer as the denominator: "))
+        print(a / b)
+    except ZeroDivisionError:
+        print("Please enter a valid denominator.")
+    except ValueError:
+        print("Both values have to be integers.")
+    except Exception:
+        print('Another error has occurred')
